@@ -57,7 +57,7 @@ public class BookServiceImpl implements BookService {
     public void deleteBook(String isbn) {
         Book book = this.bookDAO.getBookByIsbn(isbn);
         if (book == null) {
-            throw new BookException("Book with isbn = " + isbn + " doesn't exist");
+            throw new BookException("Book with isbn = " + isbn + " doesn't exist ");
         }
         bookDAO.deleteBook(isbn);
     }
